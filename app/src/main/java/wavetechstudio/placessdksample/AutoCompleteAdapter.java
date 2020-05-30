@@ -138,10 +138,10 @@ public class AutoCompleteAdapter extends ArrayAdapter<AutocompletePrediction> im
                         .setQuery(constraint.toString())
                         .setCountry("") //Use only in specific country
                         // Call either setLocationBias() OR setLocationRestriction().
-                        .setLocationBias(bounds)
+                       // .setLocationBias(bounds)
 //                        .setLocationRestriction(bounds)
-                        .setSessionToken(AutocompleteSessionToken.newInstance())
-                        .setTypeFilter(TypeFilter.ADDRESS);
+                        .setSessionToken(AutocompleteSessionToken.newInstance());
+                       // .setTypeFilter(TypeFilter.ADDRESS);
 
         Task<FindAutocompletePredictionsResponse> results =
                 placesClient.findAutocompletePredictions(requestBuilder.build());
